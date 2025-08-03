@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         bird: new Image(), background: new Image(),
         pipeTop: new Image(), pipeBottom: new Image(),
         ground: new Image(),
+        medalPlain: new Image(),
         medalBronze: new Image(),
         medalSilver: new Image(),
         medalGold: new Image()
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     assets.pipeTop.src = 'assets/pipe-top.png';
     assets.pipeBottom.src = 'assets/pipe-bottom.png';
     assets.ground.src = 'assets/tiles.png';
+    assets.medalPlain.src = 'assets/medal_plain.png';
     assets.medalBronze.src = 'assets/medal_bronze.png';
     assets.medalSilver.src = 'assets/medal_silver.png'; 
     assets.medalGold.src = 'assets/medal_gold.png';
@@ -305,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (score >= 150) {
             medalImageEl.src = assets.medalBronze.src;
         } else {
-            medalImageEl.src = '';
+            medalImageEl.src = assets.medalPlain.src;
         }
 
         scoreDisplay.style.display = 'none';
@@ -368,4 +370,5 @@ document.addEventListener('DOMContentLoaded', () => {
         questionContainer.style.display = 'block';
     });
 });
+
 
